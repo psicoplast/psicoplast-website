@@ -6,5 +6,8 @@ module.exports = {
       options: { mode: ['react-component'] }
     });
     return config;
+  },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname
   }
 };
