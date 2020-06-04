@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build-nav": "node scripts/build-navigation.js",
+    "build": "yarn build-nav && next build",
     "export": "next export",
     "start": "next start"
   },
   "dependencies": {
     "next": "9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.7"
   },
   "devDependencies": {
+    "front-matter": "^4.0.2",
     "frontmatter-markdown-loader": "^3.5.0"
   }
 }
