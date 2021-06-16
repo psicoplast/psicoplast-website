@@ -4,9 +4,16 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - label: 'Páginas'
+    name: 'pages'
     folder: 'content/pages'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: 'Artigos'
+    name: 'posts'
+    folder: 'content/posts'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
