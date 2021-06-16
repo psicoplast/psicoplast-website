@@ -9,13 +9,14 @@ collections:
     folder: 'content/pages'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Link na navegação', name: 'navigation', widget: 'string' }
+      - { label: 'Página', name: 'body', widget: 'markdown' }
   - label: 'Artigos'
     name: 'posts'
     folder: 'content/posts'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Data', name: 'date', widget: 'datetime' }
+      - { label: 'Texto', name: 'body', widget: 'markdown' }
