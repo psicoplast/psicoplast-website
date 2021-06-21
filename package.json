@@ -3,22 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build-nav": "node scripts/build-navigation.js",
-    "build": "yarn build-nav && next build",
-    "export": "next export",
-    "start": "next start"
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
-  "dependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-react": "^7.14.5",
-    "next": "11.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.35.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "front-matter": "^4.0.2",
-    "frontmatter-markdown-loader": "^3.5.0"
+    "@11ty/eleventy": "^0.12.1"
   }
 }

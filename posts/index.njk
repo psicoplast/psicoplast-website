@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: '/posts/'
+templateClass: template-posts-list
+eleventyExcludeFromCollections: true
+---
+
+<ul class="posts">
+  {%- for post in collections.posts %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+  {%- endfor %}
+</ul>
