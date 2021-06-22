@@ -1,5 +1,11 @@
+$std-pad: 0.5rem;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -7,25 +13,72 @@ body {
 header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
-  padding: 10px;
+  padding: $std-pad;
   margin: 0;
 }
 
+footer {
+  clear: both;
+  border-top: 1px solid black;
+  width: 100%;
+  & .footer-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media all and(min-width: 40em) {
+      grid-template-columns: 1fr 1fr;
+    }
+    max-width: 60em;
+    margin: auto;
+    & > div {
+      padding: $std-pad;
+    }
+  }
+}
+
 main {
-  padding: 10px;
+  max-width: 60em;
+  margin: auto;
+  padding: $std-pad;
 }
 
 ul {
   padding-left: 1em;
 }
 
+p,
+ul,
+img {
+  margin-bottom: $std-pad * 2;
+}
+
+img {
+  $max-image-width: 40em;
+  float: left;
+  overflow: hidden;
+  margin-right: $std-pad;
+  margin-bottom: $std-pad * 4;
+  max-width: m#{i}n(100%, 30em);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  clear: both;
+}
+
 /* Header styles */
 
 .home {
-  padding: 10px;
+  padding: $std-pad;
   margin: 0;
   text-transform: uppercase;
   font-size: 20px;
@@ -48,7 +101,7 @@ ul {
 }
 
 .nav-item > a {
-  padding: 10px;
+  padding: $std-pad;
   color: currentColor;
   text-decoration: none;
   font-weight: bold;
