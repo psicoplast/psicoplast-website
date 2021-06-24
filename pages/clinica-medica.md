@@ -1,6 +1,7 @@
 ---
 title: Clínica Médica
 permalink: '/clinica-medica/'
+date: 2021-06-03T19:49:24.427Z
 ---
 
 ## Dra. Fabiane Copetti – Clínica Médica – CRM 33692

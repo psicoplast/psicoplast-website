@@ -1,6 +1,7 @@
 ---
 title: Psicologia
 permalink: '/psicologia/'
+date: 2021-06-02T19:49:24.427Z
 ---
 
 ## Psicóloga Cristina Vieira Sá Copetti de Porto Alegre – CRP 1847

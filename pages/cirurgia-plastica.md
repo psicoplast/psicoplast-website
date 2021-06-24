@@ -1,6 +1,7 @@
 ---
 title: Cirurgia Plástica
 permalink: '/cirurgia-plastica/'
+date: 2021-06-01T19:49:24.427Z
 ---
 
 ## Cirurgião Plástico Dr. Jones Martinho Copetti de Porto Alegre – CRM 8835
