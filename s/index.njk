@@ -2,11 +2,12 @@
 layout: layouts/base.njk
 permalink: '/s/'
 templateClass: template-s-list
+title: 'S'
 eleventyExcludeFromCollections: true
 ---
 
 <ul class="posts">
-  {%- for post in collections.seo %}
+  {%- for post in collections.seo | reverse %}
     <li>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </li>

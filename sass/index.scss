@@ -1,6 +1,15 @@
 @import './normalize.scss';
 
 $std-pad: 0.5rem;
+$border-color: #999;
+$text-color: #444;
+$accent-color: rgb(37, 86, 190);
+$link-color: $accent-color;
+$heading-color: #333;
+
+$max-width: 50rem;
+
+/* General styles*/
 
 * {
   box-sizing: border-box;
@@ -11,47 +20,83 @@ html {
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   line-height: 1.5;
+  color: $text-color;
+  background: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   padding: 0;
   margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: $std-pad;
-  margin: 0;
-}
-
-footer {
-  clear: both;
-  border-top: 1px solid black;
-  width: 100%;
-  & .footer-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    @media all and(min-width: 40em) {
-      grid-template-columns: 1fr 1fr;
-    }
-    max-width: 60em;
-    margin: auto;
-    & > div {
-      padding: $std-pad;
-    }
-  }
+  flex-shrink: 0;
 }
 
 main {
-  max-width: 60em;
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: $max-width;
   margin: auto;
   padding: $std-pad;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* Content */
+
+a {
+  color: $link-color;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: darken($link-color, 10%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: $heading-color;
+}
+
+/* Content */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+hr {
+  clear: both;
+}
+
+ul,
+ol {
+  padding-left: 1.1em;
 }
 
 img {
@@ -61,31 +106,40 @@ img {
   margin-right: $std-pad;
   margin-bottom: $std-pad * 4;
   max-width: m#{i}n(100%, 25em);
+  border-radius: 5px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul {
-  clear: both;
+/* Layouts */
+$header-breakpoint: 700px;
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @media all and (min-width: $header-breakpoint) {
+    justify-content: space-between;
+  }
+  padding: $std-pad;
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* Header styles */
-
-.home {
+.home-link {
   padding: $std-pad;
   margin: 0;
   text-transform: uppercase;
-  font-size: 20px;
-  color: currentColor;
-  text-decoration: none;
+  font-size: 22px;
+  color: $heading-color !important;
+  &:focus,
+  &:hover {
+    color: $accent-color !important;
+  }
+  text-decoration: none !important;
   font-weight: bold;
 }
 
-.home > sup {
+.home-link > sup {
   font-size: 14px;
   padding-left: 2px;
 }
@@ -94,17 +148,156 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @media all and (min-width: $header-breakpoint) {
+    justify-content: space-around;
+  }
   margin: 0;
   padding: 0;
 }
 
-.nav-item > a {
-  padding: $std-pad;
-  color: currentColor;
-  text-decoration: none;
-  font-weight: bold;
+.nav-item {
+  display: block;
+  color: $heading-color;
+  & > a {
+    border: 2px solid white;
+    display: block;
+    padding: $std-pad;
+    margin: 0 $std-pad;
+    color: currentColor;
+    text-decoration: none;
+    font-weight: bold;
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
 .nav-item-active {
-  color: red;
+  color: $accent-color;
+  & > a {
+    border-bottom: 2px solid $accent-color;
+  }
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.16), 0 -3px 6px rgba(0, 0, 0, 0.23);
+  & .footer-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media all and(min-width: 40em) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    max-width: 60em;
+    margin: auto;
+    & > div {
+      padding: $std-pad * 2;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.call-us {
+  clear: both;
+  display: block;
+  margin: auto;
+  margin-bottom: $std-pad * 4;
+  margin-top: $std-pad * 2;
+  border-top: 2px solid $border-color;
+  padding: $std-pad;
+  max-width: $max-width;
+}
+
+.profile-img {
+  width: 150px;
+}
+
+.gallery {
+  float: left;
+  object-fit: contain;
+  width: 45%;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: auto;
+  display: inline;
+}
+
+.template-home {
+  max-width: 100%;
+  width: 100%;
+}
+
+.home-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media all and (min-width: 700px) {
+    flex-direction: row;
+  }
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: $text-color;
+    font-size: 1.2em;
+    margin: $std-pad;
+    border-radius: 5px;
+    color: white !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    transition: box-shadow 300ms ease;
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 9px rgba(0, 0, 0, 0.23);
+    }
+  }
+}
+
+.home-nav-psico {
+  background-image: url('/img/bg/psico.jpg');
+}
+.home-nav-cirurgia {
+  background-image: url('/img/bg/cirurgia.jpg');
+}
+.home-nav-clinica {
+  background-image: url('/img/bg/clinica.jpg');
+}
+
+.home-text {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.home-articles {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: $std-pad * 2;
+  margin-bottom: $std-pad * 2;
+  & > a {
+    display: inline-block;
+    padding: 0 $std-pad * 4;
+  }
+}
+
+.post-navigation {
+  padding: $std-pad;
+  display: flex;
+  flex-direction: row-reverse;
 }

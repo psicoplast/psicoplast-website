@@ -1,4 +1,4 @@
 {
   "tags": ["seo"],
-  "layout": "layouts/seo.njk"
+  "layout": "layouts/post.njk"
 }

@@ -1,10 +1,11 @@
 ---
 title: Dúvidas sobre Botox®?
-date: 2021-06-16T19:49:24.427Z
+date: 2019-06-16T19:49:24.427Z
 ---
+
 ## 6 respostas para as perguntas mais frequentes sobre Botox®
 
-![](/img/duvidas-botox.jpg)
+![](/img/post-botox.png)
 
 1. O que significa “Botox® Preventivo”? É a aplicação do Botox® em pessoas jovens a fim de minimizar e suavizar a formação das futuras rugas. Também auxilia pessoas com muita expressividade facial a prevenir marcas de expressão definitiva.
 2. Quanto tempo dura em média uma aplicação de Botox®? Entre 3 e 6 meses dependendo do número de pontos, da dose aplicada e do tônus da musculatura de cada pessoa.

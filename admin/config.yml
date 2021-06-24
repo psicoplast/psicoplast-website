@@ -8,7 +8,6 @@ locale: 'pt'
 slug:
   encoding: 'ascii'
   clean_accents: true
-#site_url: https://your-site.com
 collections:
   - label: 'Páginas'
     name: 'pages'
@@ -17,13 +16,12 @@ collections:
     extension: 'md'
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Texto na navegação', name: 'navigation', widget: 'string' }
       - {
           label: 'URL (Colocar entre barras, por exemplo: /psicologia/)',
           name: 'permalink',
           widget: 'string'
         }
-      - { label: 'Meta Description', name: 'meta_description', widget: 'text' }
+      - { label: 'Meta Description', name: 'description', widget: 'text' }
       - { label: 'Página', name: 'body', widget: 'markdown' }
   - label: 'Páginas SEO'
     name: 'seo'
@@ -32,11 +30,12 @@ collections:
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
       - {
-          label: 'URL (Colocar entre barras, por exemplo: /psicologia/)',
+          label: 'URL (Colocar entre barras, por exemplo: /psicologia-porto-alegre/)',
           name: 'permalink',
           widget: 'string'
         }
-      - { label: 'Meta Description', name: 'meta_description', widget: 'text' }
+      - { label: 'Data', name: 'date', widget: 'datetime' }
+      - { label: 'Meta Description', name: 'description', widget: 'text' }
       - { label: 'Texto', name: 'body', widget: 'markdown' }
   - label: 'Artigos'
     name: 'posts'
@@ -46,3 +45,4 @@ collections:
       - { label: 'Título', name: 'title', widget: 'string' }
       - { label: 'Data', name: 'date', widget: 'datetime' }
       - { label: 'Texto', name: 'body', widget: 'markdown' }
+      - { label: 'Meta Description', name: 'description', widget: 'text' }

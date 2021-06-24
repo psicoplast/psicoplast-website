@@ -3,11 +3,9 @@ title: Cirurgia Plástica
 permalink: '/cirurgia-plastica/'
 ---
 
-# Cirurgia Plástica
+## Cirurgião Plástico Dr. Jones Martinho Copetti de Porto Alegre – CRM 8835
 
-![Cirurgião Plástico Dr. Jones Martinho Copetti](/img/cirurgiao-plastico-de-porto-alegre-dr-jones-martinho-copetti.jpg)
-
-**Cirurgião Plástico Dr. Jones Martinho Copetti de Porto Alegre – CRM 8835**
+![Cirurgião Plástico Dr. Jones Martinho Copetti](/img/cirurgiao-plastico-de-porto-alegre-dr-jones-martinho-copetti.jpg) {.profile-img}
 
 Conheça mais sobre a Cirurgia Plástica, todas suas opções e modalidades. Na consulta com o Dr. Jones Copetti, você poderá tirar suas dúvidas sobre cirurgia plástica e compreender o que pode ser feito para realçar a sua beleza.
 
@@ -81,7 +79,10 @@ Os pacientes da Psicoplast se beneficiam do acompanhamento psicológico pré e p
 - Embratel
 - Cassi
 
+<a href="/s/">Artigos</a>
+
 ### Sala de atendimento e de curativos do Dr. Jones Copetti
 
-![Convênios oferecidos](/img/area-medica-psicoplast-1.jpeg)
-![Convênios oferecidos](/img/area-medica-psicoplast-2.jpeg)
+![Sala de atendimento do Dr. Jones Copetti](/img/area-medica-psicoplast-1.jpeg){.gallery}
+
+![Sala de curativos do Dr. Jones Copetti](/img/area-medica-psicoplast-2.jpeg){.gallery}
