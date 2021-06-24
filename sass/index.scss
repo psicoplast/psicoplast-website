@@ -1,11 +1,19 @@
+@import './normalize.scss';
+
 $std-pad: 0.5rem;
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+}
+
 body {
-  font-family: 'Ubuntu', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -46,23 +54,13 @@ main {
   padding: $std-pad;
 }
 
-ul {
-  padding-left: 1em;
-}
-
-p,
-ul,
-img {
-  margin-bottom: $std-pad * 2;
-}
-
 img {
   $max-image-width: 40em;
   float: left;
   overflow: hidden;
   margin-right: $std-pad;
   margin-bottom: $std-pad * 4;
-  max-width: m#{i}n(100%, 30em);
+  max-width: m#{i}n(100%, 25em);
 }
 
 h1,
