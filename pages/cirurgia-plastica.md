@@ -80,7 +80,7 @@ Os pacientes da Psicoplast se beneficiam do acompanhamento psicológico pré e p
 - Embratel
 - Cassi
 
-<a href="/s/">Artigos</a>
+[Artigos](/s/)
 
 ### Sala de atendimento e de curativos do Dr. Jones Copetti
 
