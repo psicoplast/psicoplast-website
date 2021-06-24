@@ -7,11 +7,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginSass, {
     watch: ['sass/*', '!node_modules/**'],
-    outputDir: './css'
+    outputDir: './_site/css'
   });
 
   eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('css');
+  //eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('admin');
 
   /* Markdown Overrides */
